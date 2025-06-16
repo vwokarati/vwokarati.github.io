@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vwokarati - Programs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      padding-top: 70px;
+      padding-bottom: 60px;
+      background: linear-gradient(to bottom right, #1a0033, #0a0326);
+      color: white;
+    }
+
+   header, footer {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(to right, #4b0082, #8a2be2);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  z-index: 1000;
+}
+
+header {
+  top: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  flex-wrap: wrap;
+}
+
+header div {
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #ffebf7;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ✅ Mobile-Friendly Header Fix */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  header div {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 1em;
+  }
+}
+
+
+
+    footer {
+      bottom: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #4b0082, #8a2be2);
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.5em;
+      color: #FFD700;
+      margin-bottom: 30px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .tab-button {
+      background: #333;
+      color: white;
+      padding: 12px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .tab-button.active,
+    .tab-button:hover {
+      background: #FFD700;
+      color: #1a0033;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .tab-content h3 {
+      font-size: 1.6em;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .section h2 {
+        font-size: 2em;
+      }
+    }
+    .logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-title .logo {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+}
+nav a.active {
+  color: #FFD700; /* gold/yellow */
+  font-weight: bold;
+  border-bottom: 3px solid #FFD700;
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-title">
+    <img src="images/logo.jpg" alt="VWO-Karati Logo" class="logo" />
+    <span>VWO-Karati</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="programs.html">Programs</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="contacts.html">Contacts</a>
+  </nav>
+</header>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+  <div class="section">
+    <h2>Our Programs</h2>
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab(0)">Discipleship</button>
+      <button class="tab-button" onclick="showTab(1)">Youth Mentorship</button>
+      <button class="tab-button" onclick="showTab(2)">Women's Circle</button>
+      <button class="tab-button" onclick="showTab(3)">Outreach</button>
+      <button class="tab-button" onclick="showTab(4)">Creative Arts</button>
+    </div>
+
+    <div class="tab-content active">
+      <h3>Discipleship Training</h3>
+      <p>Weekly classes that dive deep into the Word of God and Christian doctrine, helping believers grow strong spiritual roots and lead with wisdom.</p>
+    </div>
+    <div class="tab-content">
+      <h3>Youth Mentorship</h3>
+      <p>A powerful initiative connecting teens and young adults with trusted mentors who guide them in faith, life, education, and personal development.</p>
+    </div>
+    <div class="tab-content">
+      <h3>Women's Empowerment Circle</h3>
+      <p>A safe, empowering space for women to gather, support each other, study Scripture, and rise together in faith and leadership.</p>
+    </div>
+    <div class="tab-content">
+      <h3>Outreach & Evangelism</h3>
+      <p>Hands-on community engagement: street ministry, food drives, prison visits, and neighborhood outreach to share Christ’s love in action.</p>
+    </div>
+    <div class="tab-content">
+      <h3>Creative Arts Ministry</h3>
+      <p>Drama, dance, spoken word, music, and media — a vibrant program where creativity is used to glorify God and express faith artistically.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 VWO-karati Church. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showTab(index) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      contents.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        buttons[i].classList.toggle('active', i === index);
+      });
+    }
+  </script>
+  <script>
+  // Highlight the active nav link based on current page
+  const currentPage = location.pathname.split("/").pop(); // gets the current filename
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage || (currentPage === "" && link.getAttribute("href") === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+</body>
+</html>
